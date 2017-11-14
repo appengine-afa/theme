@@ -1,14 +1,14 @@
 {
-    "name": "teepluss/theme",
-    "description": "Theme will help you organize your themes inside Laravel projects easily and maintain its related assets, layouts and partials for the theme in single directory.",
+    "name": "appengine-afa/theme",
+    "description": "This is an overried of the teepluss/laralve-theme package, as the latest version of that package does not support Laravel >=5.4",
     "keywords": ["laravel", "theme", "layout", "asset", "widget", "twig"],
-    "homepage": "https://github.com/teepluss/laravel-theme",
+    "homepage": "https://github.com/appengine-afa/theme",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Teepluss",
-            "email": "admin@laravel.in.th"
+            "name": "AFA",
+            "email": "appengine@americaforanimals.org"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Teepluss\\Theme\\": "src/"
+            "AppEngineAFA\\Theme\\": "src/"
         },
         "classmap": [
             "src/Exceptions.php"

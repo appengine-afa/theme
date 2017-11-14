@@ -7,13 +7,13 @@ Right now Theme supports PHP, Blade, and Twig.
 
 ### Installation
 
-- [Theme on Packagist](https://packagist.org/packages/teepluss/theme)
-- [Theme on GitHub](https://github.com/teepluss/laravel-theme)
+
+- See [Theme on GitHub](https://github.com/teepluss/laravel-theme)
 
 To get the latest version of Theme simply require it in your `composer.json` file.
 
 ~~~
-"teepluss/theme": "^2.0"
+"appengine-afa/theme": "^1.0"
 ~~~
 
 You'll then need to run `composer install` to download it and have the autoloader updated.
@@ -23,7 +23,7 @@ Once Theme is installed you need to register the service provider with the appli
 ~~~
 'providers' => [
 
-    Teepluss\Theme\ThemeServiceProvider::class,
+    AppEngineAFA\Theme\ThemeServiceProvider::class,
 
 ]
 ~~~
@@ -33,7 +33,7 @@ Theme also ships with a facade which provides the static syntax for creating col
 ~~~
 'aliases' => [
 
-    'Theme' => Teepluss\Theme\Facades\Theme::class,
+    'Theme' => AppEngineAFA\Theme\Facades\Theme::class,
 
 ]
 ~~~
@@ -41,7 +41,7 @@ Theme also ships with a facade which provides the static syntax for creating col
 Publish config using artisan CLI.
 
 ~~~
-php artisan vendor:publish --provider="Teepluss\Theme\ThemeServiceProvider"
+php artisan vendor:publish --provider="AppEngineAFA\Theme\ThemeServiceProvider"
 ~~~
 
 ## Usage
@@ -166,7 +166,7 @@ class HomeController extends Controller {
         $theme = Theme::uses('default')->layout('mobile');
 
         $view = array(
-            'name' => 'Teepluss'
+            'name' => 'AppEngineAFA'
         );
 
         // home.index will look up the path 'resources/views/home/index.php'
@@ -233,10 +233,10 @@ Theme now supports PHP, Blade and Twig. To use Blade or Twig template you just c
 
 ~~~php
 // Blade template.
-return $theme->string('<h1>{{ $name }}</h1>', array('name' => 'Teepluss'), 'blade')->render();
+return $theme->string('<h1>{{ $name }}</h1>', array('name' => 'AppEngineAFA'), 'blade')->render();
 
 // Twig Template
-return $theme->string('<h1>{{ name }}</h1>', array('name' => 'Teepluss'), 'twig')->render();
+return $theme->string('<h1>{{ name }}</h1>', array('name' => 'AppEngineAFA'), 'twig')->render();
 ~~~
 
 ### Compile string
@@ -245,14 +245,14 @@ return $theme->string('<h1>{{ name }}</h1>', array('name' => 'Teepluss'), 'twig'
 // Blade compile.
 $template = '<h1>Name: {{ $name }}</h1><p>{{ Theme::widget("WidgetIntro", array("userId" => 9999, "title" => "Demo Widget"))->render() }}</p>';
 
-echo Theme::blader($template, array('name' => 'Teepluss'));
+echo Theme::blader($template, array('name' => 'AppEngineAFA'));
 ~~~
 
 ~~~php
 // Twig compile.
 $template = '<h1>Name: {{ name }}</h1><p>{{ Theme.widget("WidgetIntro", {"userId" : 9999, "title" : "Demo Widget"}).render() }}</p>';
 
-echo Theme::twigy($template, array('name' => 'Teepluss'));
+echo Theme::twigy($template, array('name' => 'AppEngineAFA'));
 ~~~
 
 ### Symlink from another view
@@ -598,7 +598,7 @@ echo Theme::widget('demo', array('label' => 'Demo Widget'))->render();
 
 ### Using theme global
 ~~~php
-use Teepluss\Theme\Contracts\Theme;
+use AppEngineAFA\Theme\Contracts\Theme;
 use App\Http\Controllers\Controller;
 
 class BaseController extends Controller {
@@ -606,7 +606,7 @@ class BaseController extends Controller {
     /**
      * Theme instance.
      *
-     * @var \Teepluss\Theme\Theme
+     * @var \AppEngineAFA\Theme\Theme
      */
     protected $theme;
 
@@ -639,7 +639,4 @@ public function getIndex()
 
 ## Support or Contact
 
-If you have any problems, Contact teepluss@gmail.com
-
-
-[![Support via PayPal](https://rawgithub.com/chris---/Donation-Badges/master/paypal.jpeg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9GEC8J7FAG6JA)
+If you have any problems, Contact appengine@americaforanimals.org
