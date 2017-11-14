@@ -1,6 +1,6 @@
 {
     "name": "appengine-afa/theme",
-    "description": "This is an overried of the teepluss/laralve-theme package, as the latest version of that package does not support Laravel >=5.4",
+    "description": "This is an override of the teepluss/laravel-theme package, as the latest version of that package does not support Laravel >=5.4",
     "keywords": ["laravel", "theme", "layout", "asset", "widget", "twig"],
     "homepage": "https://github.com/appengine-afa/theme",
     "type": "library",

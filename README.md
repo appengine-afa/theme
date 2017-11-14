@@ -1,10 +1,5 @@
 ## Theme Management for Laravel
 
-### For Laravel 4, please use the [v1.x branch](https://github.com/teepluss/laravel-theme/tree/v1.x)!
-
-Theme is a theme management for Laravel 5, it is the easiest way to organize your skins, layouts and assets.
-Right now Theme supports PHP, Blade, and Twig.
-
 ### Installation
 
 
